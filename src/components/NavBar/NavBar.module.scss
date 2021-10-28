@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+
+
+.NavBar {
+ display: flex;
+ align-items: center;
+ background-color: #577399;
+}
+
+.link {
+  margin-left: 7%;
+  display:flex;
+  flex-wrap: nowrap;
+  color: lightgray;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-size: smaller;
+  margin-top: 1%;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.Brand {
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  align-items: center;
+  color: lightgray;
+  text-decoration: none;
+}
+
+.Brand:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.link:after {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.Brand:after {
+  text-decoration: none;
+  color: white;
+}

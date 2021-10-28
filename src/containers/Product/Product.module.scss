@@ -1,0 +1,26 @@
+.Product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+
+  &__img {
+    width: 50%;
+    margin-bottom: 5%;
+  }
+
+  &__name {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  &__type {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+  }
+
+  &__des {
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+}

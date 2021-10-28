@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Products from './containers/Products/Products';
+import SearchProvider from './context/SearchContext/SearchContext';
+import  Header  from './containers/Header/Header';
+import  { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import styles from "./App.module.scss";
+import styles from "./containers/Products/Products.module.scss";
+import Home from "./containers/Home/Home";
+import Product from "./containers/Product/Product";
+
 
 function App() {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+    <Router>
+    <SearchProvider>
+      <Header />
+      <Switch>
+        <Route path="/products/:id">
+          <Product />
+        </Route>
+        <Route path="/products">
+          <Products className={styles.Products}/>
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+        </Switch>
+        </SearchProvider>
+    </Router>
+  
   );
 }
 

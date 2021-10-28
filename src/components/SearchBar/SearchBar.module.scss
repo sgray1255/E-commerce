@@ -1,0 +1,17 @@
+.SearchBar {
+  display: flex;
+  margin-left: 20%;
+  align-content: center;
+  height: 20px;
+
+}
+
+.button {
+  background: #2C365E;
+  border: none;
+  // border-radius: 50%;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: lightgray;
+}
