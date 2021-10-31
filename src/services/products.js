@@ -29,8 +29,10 @@ export const findProduct = async(id) => {
   return cleanProduct(docSnap);
 }
 
-export const updateProduct = async (productID, value) => {
+export const updateProduct = async (id, partial) => {
+  console.log(partial);
   const colRef = firestore.collection("products");
-  const docRef = colRef.doc(productID);
-  await docRef.update(value);
+  const docRef = colRef.doc(id);
+  await docRef.update(partial);
+ 
 };

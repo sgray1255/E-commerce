@@ -2,7 +2,7 @@ import styles from "../Home/Home.module.scss";
 import CarouselList from "../../components/CarouselList";
 import Products from "../Products";
 import { Link } from 'react-router-dom';
-import Models from "../../components/Models/Models";
+
 
 const Home = ( {products} ) => {
   return (
@@ -11,7 +11,7 @@ const Home = ( {products} ) => {
       <CarouselList />
     </div>
     <div>
-      <Models />
+    
     </div>
     <div className={styles.Apparel}>
       <h2>Best Sellers in Apparel</h2>

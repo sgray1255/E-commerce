@@ -6,37 +6,73 @@ import Favorite from "../../components/Favorite";
 import styles from "./Product.module.scss";
 import firestore from "../../services/firestore";
 
+async function updateProduct(id, quantity) {
+  if (id) {
+    console.log(id);
+    console.log(quantity);
+
+    const value = {
+      qty: quantity
+    }
+    
+    console.log(value);
+
+    const colRef = firestore.collection("products");
+    const docRef = colRef.doc(id);
+    console.log(docRef);
+    await docRef.update(value);
+  }
+};
+
+async function updateFavorite(id, favorite) {
+  if (id) {
+
+    const value = {
+      isFavorite: favorite
+    }
+    
+    console.log(value);
+
+    const colRef = firestore.collection("products");
+    const docRef = colRef.doc(id);
+    console.log(docRef);
+    await docRef.update(value);
+  }
+};
 
 const Product = ({productID}) => {
   const { id } = useParams();
+
   const [product, setProduct] = useState(null);
 
-  const [quantity, setQty] = useState(1);
+  const [quantity, setQty] = useState(0);
+
+  const [isFav, setIsFav] = useState(false);
 
   useEffect(() => {
-    async function updateProduct(id, value) {
-    
-      value = {
-        qty: quantity
-      }
-      const colRef = firestore.collection("products");
-      const docRef = colRef.doc(id);
-      console.log(docRef);
-      await docRef.update(value);
-      console.log(product.qty);
-    }
+    console.log(id);
+    console.log(isFav)
+    updateFavorite(id, !isFav)
+  },[isFav]);
 
-    updateProduct();
+  useEffect(() => {
+
+    console.log(id);
+    console.log(quantity);
+    updateProduct(id, quantity);
 
   },[quantity])
 
   
-
   useEffect(() => {
     const populateProduct = async () => {
       const data = await findProduct(id);
+      console.log(id);
+      setQty(quantity);
       setProduct(data);
+      setIsFav(!isFav);
     }
+
 
     populateProduct();
 
@@ -59,7 +95,7 @@ const Product = ({productID}) => {
       <h3 className={styles.Product__type}>{product.productType}</h3>
       <p className={styles.Product__des}>{product.description}</p>
       <Quantity value={quantity} onChange={setQty}/>
-      <Favorite />
+      <Favorite onChange={setIsFav}/>
     </div>
   )
 }}

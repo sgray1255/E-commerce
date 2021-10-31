@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { updateProduct } from '../../services/products';
 import styles from "./Favorite.module.scss";
 
-const Favorite = ({product}) => {
+const Favorite = ({onChange}) => {
 
   const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    onChange(!isFavorite);
+
+  },[isFavorite]);
 
   const handleClick = () => {
     setIsFavorite(!isFavorite);

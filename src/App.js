@@ -2,6 +2,7 @@ import './App.css';
 import Products from './containers/Products/Products';
 import SearchProvider from './context/SearchContext/SearchContext';
 import  Header  from './containers/Header/Header';
+import { useParams } from 'react';
 import  { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import styles from "./App.module.scss";
 import styles from "./containers/Products/Products.module.scss";
@@ -12,6 +13,7 @@ import Product from "./containers/Product/Product";
 function App() {
 
   
+
   return (
   
     <Router>

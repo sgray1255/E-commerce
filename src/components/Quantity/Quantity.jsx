@@ -1,11 +1,18 @@
 import { updateProduct, getProducts, findProduct } from "../../services/products";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./Quantity.module.scss";
 
 
-const Quantity = () => {
+const Quantity = ({onChange}) => {
 
   const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    onChange(count);
+
+  }, [count]);
+
+
 
   const increment = (event) => {
 
@@ -18,7 +25,7 @@ const Quantity = () => {
       }
   };
 
-
+ 
   console.log(count);
 
 

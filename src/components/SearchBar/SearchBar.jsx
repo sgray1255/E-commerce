@@ -23,7 +23,7 @@ const SearchBar = () => {
     return (
         <div className={styles.SearchBar}>
             <input value={currentInput} onChange={handleChange} type="text" />
-            <button className={styles.button} onClick={handleClick} type="submit"><i class="fa fa-search"></i></button>
+            <button className={styles.button} onClick={handleClick} type="submit"><i className="fa fa-search"></i></button>
         </div>
     );
 };
