@@ -6,7 +6,7 @@ import { useParams } from 'react';
 import  { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import styles from "./App.module.scss";
 import styles from "./containers/Products/Products.module.scss";
-import Home from "./containers/Home/Home";
+import Home from "./containers/Home";
 import Product from "./containers/Product/Product";
 
 

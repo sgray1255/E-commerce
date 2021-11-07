@@ -1,0 +1,27 @@
+.Models {
+  display: flex;
+  height: 135px;
+  align-items: center;
+  background-color: lightgray;  
+  margin: 2.5%;
+  border-radius: 7px;
+  overflow-x: scroll;
+  
+
+  &__img {
+    height: 10rem;
+    width: 12rem;
+    padding: 3%;
+    padding-left: 5%;
+    border-radius: 7px;
+    margin-left: 5%;
+  }
+
+  &__header{
+    font-family: 'Orbitron', 'sans-serif';
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+}

@@ -1,5 +1,6 @@
 .background {
   background-image: linear-gradient(to top, rgb(158, 158, 158), whitesmoke);
+  margin-top: 0%;
 }
 
 .ProductsList {
@@ -15,12 +16,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  // margin-top: 5%;
   font-family: 'Orbitron', sans-serif;
 }
 
 .h1 {
   font-size: 75px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .h2 {
