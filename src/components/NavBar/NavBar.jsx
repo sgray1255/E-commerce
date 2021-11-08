@@ -23,7 +23,7 @@ const NavBar = () => {
         TenForward
       </Link>
       <Link className={styles.link}to="/products">Products</Link>
-      <Link className={styles.link}to="/contactus">Contact</Link>
+      <Link className={styles.link}to="/makefirstcontact">FirstContact</Link>
     </div>
   )
 };

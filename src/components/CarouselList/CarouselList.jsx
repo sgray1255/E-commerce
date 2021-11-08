@@ -2,7 +2,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 import styles from "./CarouselList.module.scss"
 
-const CarouselList = () => {
+const CarouselList = ( {products} ) => {
+
+  
   return (
     <div className={styles.CarouselList}>
     <Carousel className={styles.Carousel}>

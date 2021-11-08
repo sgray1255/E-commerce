@@ -8,6 +8,7 @@ import  { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import styles from "./containers/Products/Products.module.scss";
 import Home from "./containers/Home";
 import Product from "./containers/Product/Product";
+import Contact from "./containers/Contact";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/">
           <Home />
+        </Route>
+        <Route  path="/makefirstcontact">
+          <Contact />
         </Route>
         </Switch>
         </SearchProvider>

@@ -36,3 +36,9 @@ export const updateProduct = async (id, partial) => {
   await docRef.update(partial);
  
 };
+
+export const findCartItems = async () => {
+  const colRef = firestore.collection("products").where("inCart", "==", true);
+  const snapshot = await colRef.get();
+  return cleanProducts(snapshot);
+}

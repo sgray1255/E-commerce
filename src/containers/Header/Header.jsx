@@ -3,6 +3,8 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import styles from "./Header.module.scss";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
+
+
  const Header = () => {
   return (
     <div className={styles.Header}>
@@ -12,7 +14,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
         <SearchBar />
 
         <ShoppingCartIcon style={{fill:"white", fontSize:"large"}}/>
-
+    
     </div>
   )
 };
