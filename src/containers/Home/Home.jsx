@@ -45,7 +45,7 @@ const getProducts = async () => {
   return (
   <div className={styles.background}> 
     <div>
-      <CarouselList />
+      <CarouselList products= {products}/>
     </div>
       <Models products={products}/>
   </div>

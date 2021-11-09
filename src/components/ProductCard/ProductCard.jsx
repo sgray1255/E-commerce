@@ -15,11 +15,11 @@ export const ProductCard = ({product}) => {
 
   return (
   <div className={styles.ProductCard}>
-    <Card style={{ width: '18rem', height: '26rem', padding: '5px'}}>
+    <Card style={{ width: '18rem', height: '26rem', padding: '5px', display: 'flex', alignItems: 'center'}}>
       <Card.Img variant="top" src={product.img}  />
       <Card.Body>
-        <Card.Title style={{font:'arial'}}>{product.productName}</Card.Title>
-        <Card.Text>
+        <Card.Title className={styles.title}>{product.productName}</Card.Title>
+        <Card.Text className={styles.text}>
           Price: ${product.price}
         </Card.Text>
          {/* <Quantity /> */}

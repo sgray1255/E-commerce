@@ -2,6 +2,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import styles from "./Header.module.scss";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,7 +14,9 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
     
         <SearchBar />
 
+        <Link to="/cart">
         <ShoppingCartIcon style={{fill:"white", fontSize:"large"}}/>
+        </Link>
     
     </div>
   )

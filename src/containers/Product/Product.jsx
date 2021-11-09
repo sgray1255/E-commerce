@@ -4,6 +4,7 @@ import { findProduct } from "../../services/products";
 import Quantity from "../../components/Quantity";
 import Favorite from "../../components/Favorite";
 import styles from "./Product.module.scss";
+import AddCart from "../../components/AddCart";
 import firestore from "../../services/firestore";
 
 async function updateProduct(id, quantity) {
@@ -40,6 +41,22 @@ async function updateFavorite(id, favorite) {
   }
 };
 
+async function updateInCart(id, cart) {
+  if (id) {
+
+    const value = {
+      inCart: cart
+    }
+    
+    console.log(value);
+
+    const colRef = firestore.collection("products");
+    const docRef = colRef.doc(id);
+    console.log(docRef);
+    await docRef.update(value);
+  }
+};
+
 const Product = ({productID}) => {
   const { id } = useParams();
 
@@ -48,6 +65,14 @@ const Product = ({productID}) => {
   const [quantity, setQty] = useState(0);
 
   const [isFav, setIsFav] = useState(false);
+
+  const [inCart, setInCart] = useState(false);
+
+  useEffect(() => {
+    console.log(id);
+    console.log(inCart)
+    updateInCart(id, !inCart)
+  },[inCart]);
 
   useEffect(() => {
     console.log(id);
@@ -71,6 +96,7 @@ const Product = ({productID}) => {
       setQty(quantity);
       setProduct(data);
       setIsFav(!isFav);
+      setInCart(!inCart);
     }
 
 
@@ -96,6 +122,7 @@ const Product = ({productID}) => {
       <p className={styles.Product__des}>{product.description}</p>
       <Quantity value={quantity} onChange={setQty}/>
       <Favorite onChange={setIsFav}/>
+      <AddCart onChange={setInCart}/>
     </div>
   )
 }}
