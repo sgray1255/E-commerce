@@ -25,6 +25,8 @@ async function updateCart(id, quantity) {
 const CartItem =({product}) => {
 
   const [quantity, setQty] = useState(0);
+  
+
   const id = product.productID;
 
   useEffect(() => {
@@ -32,7 +34,7 @@ const CartItem =({product}) => {
 
     console.log(quantity);
     updateCart(id, quantity);
-
+    
   },[quantity])
 
 

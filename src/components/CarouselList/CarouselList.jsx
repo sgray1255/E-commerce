@@ -9,7 +9,7 @@ const CarouselList = ( {products} ) => {
     <div className={styles.CarouselList}>
     <Carousel className={styles.Carousel}>
         <Carousel.Item interval={2000}>
-          <img style={{'height':"300px"}}
+          <img style={{'height':"500px"}}
           className="d-block w-100"
           src= "https://www.herocollector.com/uploads/media/Build-Ent-D-below.jpg"
           alt= "Image One"
@@ -20,7 +20,7 @@ const CarouselList = ( {products} ) => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={2000}>
-          <img style={{'height':"300px"}}
+          <img style={{'height':"500px"}}
           className="d-block w-100"
           src= "https://blog.trekcore.com/wp-content/uploads/2018/07/defiant5.jpg"
           alt= "Image Two"
@@ -31,7 +31,7 @@ const CarouselList = ( {products} ) => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={2000}>
-          <img style={{'height':"300px"}}
+          <img style={{'height':"500px"}}
           className="d-block w-100"
           src= "https://canary.contestimg.wish.com/api/webimage/5a07dfc57298d91974dead4b-large.jpg?cache_buster=b812add267fc9932e08f36a4ae6a4f67"
           alt= "Image Three"
